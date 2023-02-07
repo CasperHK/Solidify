@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite'
-import solid from 'vite-plugin-solid'
+import solid from "solid-start/vite";
+import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [solid({ ssr: true })]
-})
+  plugins: [
+    solid({
+      babel: (_, id) => ({
+        plugins: [["solid-styled/babel", { source: id }]],
+      }),
+    }),
+  ],
+});

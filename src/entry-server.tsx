@@ -1,7 +1,9 @@
-import { renderToString } from 'solid-js/web'
-import App from './App'
+import {
+  StartServer,
+  createHandler,
+  renderAsync,
+} from "solid-start/entry-server";
 
-export function render() {
-  const html = renderToString(() => <App />)
-  return { html }
-}
+export default createHandler(
+  renderAsync((event) => <StartServer event={event} />)
+);
