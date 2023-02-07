@@ -11,7 +11,9 @@ specifiers:
   '@types/node': ^18.11.18
   esbuild: ^0.14.54
   i18next: ^22.4.9
+  ky: ^0.33.2
   postcss: ^8.4.21
+  sass: ^1.58.0
   solid-js: ^1.6.10
   solid-start: ^0.2.20
   solid-start-node: ^0.2.19
@@ -29,6 +31,7 @@ dependencies:
   '@solidjs/router': 0.7.0_solid-js@1.6.10
   '@stitches/core': 1.2.8
   i18next: 22.4.9
+  ky: 0.33.2
   solid-js: 1.6.10
   solid-start: 0.2.20_vkjva64sf73ktmwxznregy75uy
   solid-transition-group: 0.0.13_solid-js@1.6.10
@@ -38,9 +41,10 @@ devDependencies:
   '@types/node': 18.13.0
   esbuild: 0.14.54
   postcss: 8.4.21
+  sass: 1.58.0
   solid-start-node: 0.2.20_ayfax56g6jwpcefspubm3qbtna
   typescript: 4.9.5
-  vite: 3.2.5_@types+node@18.13.0
+  vite: 3.2.5_gyrp4zacqcjjrmgvdzgac5epyy
 
 packages:
 
@@ -2275,6 +2279,9 @@ packages:
       '@babel/runtime': 7.20.13
     dev: false
 
+  /immutable/4.2.4:
+    resolution: {integrity: sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==}
+
   /inflight/1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
     dependencies:
@@ -2377,6 +2384,11 @@ packages:
 
   /kolorist/1.7.0:
     resolution: {integrity: sha512-ymToLHqL02udwVdbkowNpzjFd6UzozMtshPQKVi5k1EjKRqKqBrOnE9QbLEb0/pV76SAiIT13hdL8R6suc+f3g==}
+
+  /ky/0.33.2:
+    resolution: {integrity: sha512-f6oS2rKUcPu5FzdqCDbFpmzis/JlqFZw8uIHm/jf8Kc3vtnW+VDhuashOAKyBZv8bFiZFZUMNxTC0JtahEvujA==}
+    engines: {node: '>=14.16'}
+    dev: false
 
   /lodash.debounce/4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
@@ -2648,6 +2660,15 @@ packages:
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
 
+  /sass/1.58.0:
+    resolution: {integrity: sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.2.4
+      source-map-js: 1.0.2
+
   /scroll-lock/2.1.5:
     resolution: {integrity: sha512-GN8Lp0AzXbkrPFUUNkMUruiiv019UvarNKE/SnXi+AxZRjMnDc2R22VB9RcUtL4P/uub04cKibmpHKIKTyWwYQ==}
     dev: false
@@ -2699,7 +2720,7 @@ packages:
       solid-start: 0.2.20_vkjva64sf73ktmwxznregy75uy
       terser: 5.16.3
       undici: 5.18.0
-      vite: 3.2.5_@types+node@18.13.0
+      vite: 3.2.5_gyrp4zacqcjjrmgvdzgac5epyy
     transitivePeerDependencies:
       - supports-color
 
@@ -2769,7 +2790,7 @@ packages:
       solid-start-node: 0.2.20_ayfax56g6jwpcefspubm3qbtna
       terser: 5.16.3
       undici: 5.18.0
-      vite: 3.2.5_@types+node@18.13.0
+      vite: 3.2.5_gyrp4zacqcjjrmgvdzgac5epyy
       vite-plugin-inspect: 0.7.15_rollup@3.14.0+vite@3.2.5
       vite-plugin-solid: 2.5.0_solid-js@1.6.10+vite@3.2.5
       wait-on: 6.0.1_debug@4.3.4
@@ -2947,7 +2968,7 @@ packages:
       kolorist: 1.7.0
       sirv: 2.0.2
       ufo: 1.0.1
-      vite: 3.2.5_@types+node@18.13.0
+      vite: 3.2.5_gyrp4zacqcjjrmgvdzgac5epyy
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -2964,12 +2985,12 @@ packages:
       merge-anything: 5.1.4
       solid-js: 1.6.10
       solid-refresh: 0.4.3_solid-js@1.6.10
-      vite: 3.2.5_@types+node@18.13.0
+      vite: 3.2.5_gyrp4zacqcjjrmgvdzgac5epyy
       vitefu: 0.2.4_vite@3.2.5
     transitivePeerDependencies:
       - supports-color
 
-  /vite/3.2.5_@types+node@18.13.0:
+  /vite/3.2.5_gyrp4zacqcjjrmgvdzgac5epyy:
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2999,6 +3020,7 @@ packages:
       postcss: 8.4.21
       resolve: 1.22.1
       rollup: 2.79.1
+      sass: 1.58.0
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -3010,7 +3032,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 3.2.5_@types+node@18.13.0
+      vite: 3.2.5_gyrp4zacqcjjrmgvdzgac5epyy
 
   /wait-on/6.0.1_debug@4.3.4:
     resolution: {integrity: sha512-zht+KASY3usTY5u2LgaNqn/Cd8MukxLGjdcZxT2ns5QzDmTFc4XoWBgC+C/na+sMRZTuVygQoMYwdcVjHnYIVw==}

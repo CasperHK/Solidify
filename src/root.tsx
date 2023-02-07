@@ -1,7 +1,7 @@
 // @refresh reload
 // import { I18nProvider, useI18n } from '@amoutonbrady/solid-i18n';
-// import { HopeProvider } from '@hope-ui/solid'
-// import { App } from './app'
+import { HopeProvider } from '@hope-ui/solid'
+import { App } from './app'
 import {
   Body,
   Head,
