@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@solid-aria/i18n': ^0.2.0
   '@solidjs/meta': ^0.28.2
   '@solidjs/router': ^0.7.0
   '@types/node': ^18.11.18
@@ -14,6 +15,7 @@ specifiers:
   vite: ^3.2.5
 
 dependencies:
+  '@solid-aria/i18n': 0.2.0_solid-js@1.6.10
   '@solidjs/meta': 0.28.2_solid-js@1.6.10
   '@solidjs/router': 0.7.0_solid-js@1.6.10
   solid-js: 1.6.10
@@ -1156,6 +1158,12 @@ packages:
     dependencies:
       '@hapi/hoek': 9.3.0
 
+  /@internationalized/number/3.1.2:
+    resolution: {integrity: sha512-Mbys8SGsn0ApXz3hJLNU+d95B8luoUbwnmCpBwl7d63UmYAlcT6TRDyvaS/vwdbElXLcsQJjQCu0gox2cv/Tig==}
+    dependencies:
+      '@swc/helpers': 0.4.14
+    dev: false
+
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
     engines: {node: '>=6.0.0'}
@@ -1294,6 +1302,45 @@ packages:
   /@sideway/pinpoint/2.0.0:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
 
+  /@solid-aria/i18n/0.2.0_solid-js@1.6.10:
+    resolution: {integrity: sha512-zrzewEmj07mBD/ubIcjCp5f34hv3LAzTCXbnqCsNZ+289yJDkJ5xO/pOtaDzp5ISqd3FXRMwT+gzrCxbTRebKw==}
+    peerDependencies:
+      solid-js: ^1.4.4
+    dependencies:
+      '@internationalized/number': 3.1.2
+      '@solid-aria/types': 0.1.4_solid-js@1.6.10
+      '@solid-aria/utils': 0.2.1_solid-js@1.6.10
+      '@solid-primitives/utils': 2.2.1_solid-js@1.6.10
+      solid-js: 1.6.10
+    dev: false
+
+  /@solid-aria/types/0.1.4_solid-js@1.6.10:
+    resolution: {integrity: sha512-CxVXiZPE+nfD7wr7+6xtY3IrCTyAfL3zW4tH4NtsxlqBoz10tLFRCsTqeyl6OWMDhwABIaSdeHPKXVnKsKErcQ==}
+    peerDependencies:
+      solid-js: ^1.4.4
+    dependencies:
+      '@solid-primitives/utils': 2.2.1_solid-js@1.6.10
+      solid-js: 1.6.10
+    dev: false
+
+  /@solid-aria/utils/0.2.1_solid-js@1.6.10:
+    resolution: {integrity: sha512-zZgPpdg7azQUKE2jDUnCmzopN8CFdeKKcFTIv9ICrc0afS1qUR8ScywWBF/AwNBgGYhneBr7xEOwAHxe+zUcHQ==}
+    peerDependencies:
+      solid-js: ^1.4.4
+    dependencies:
+      '@solid-aria/types': 0.1.4_solid-js@1.6.10
+      '@solid-primitives/utils': 2.2.1_solid-js@1.6.10
+      solid-js: 1.6.10
+    dev: false
+
+  /@solid-primitives/utils/2.2.1_solid-js@1.6.10:
+    resolution: {integrity: sha512-vaBO3MGOpjzitbSAVuJkYZnzNPRl6sRrw2do390DEBbfeqMfPpW4fAEb5/tI4b5T13V1xAY+giHoxqvVg2SRhQ==}
+    peerDependencies:
+      solid-js: ^1.4.1
+    dependencies:
+      solid-js: 1.6.10
+    dev: false
+
   /@solidjs/meta/0.28.2_solid-js@1.6.10:
     resolution: {integrity: sha512-avlLgBPdk4KVxzRGFlYp/MIJo8B5jVgXPgk6OUnUP8km21Z+ovO+DUd7ZPA7ejv8PBdWi9GE3zCzw8RU2YuV2Q==}
     peerDependencies:
@@ -1307,6 +1354,12 @@ packages:
       solid-js: ^1.5.3
     dependencies:
       solid-js: 1.6.10
+
+  /@swc/helpers/0.4.14:
+    resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
+    dependencies:
+      tslib: 2.5.0
+    dev: false
 
   /@types/cookie/0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
