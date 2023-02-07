@@ -1,5 +1,6 @@
 // @refresh reload
 import { Suspense } from "solid-js";
+import { I18nProvider, useI18n } from '@amoutonbrady/solid-i18n';
 import {
   A,
   Body,
@@ -16,24 +17,24 @@ import "./root.css";
 
 export default function Root() {
   return (
-    <Html lang="en">
-      <Head>
-        <Title>SolidStart - Bare</Title>
+      <Html lang="en">
+        <Head>
+        <Title>SolidStart - Bare123</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <Body>
+        </Head>
+        <Body>
         <Suspense>
-          <ErrorBoundary>
+            <ErrorBoundary>
             <A href="/">Index</A>
             <A href="/about">About</A>
             <Routes>
-              <FileRoutes />
+                <FileRoutes />
             </Routes>
-          </ErrorBoundary>
+            </ErrorBoundary>
         </Suspense>
         <Scripts />
-      </Body>
+        </Body>
     </Html>
   );
 }
